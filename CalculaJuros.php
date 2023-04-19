@@ -27,6 +27,46 @@
 			$this->Periodo = $periodo;
 		}
 
+		function setPagamentos( $delimitador = ",", $pagamentos = "")
+		{
+			$indice = 0;
+			if( $pagamentos === "")
+			{
+				for( $indice = 1; $indice <= $this->Quantidade; $indice++)
+				{
+					$this->Pagamentos[ $indice] = $indice * $this->Periodo;
+				}
+			}
+			else
+			{
+				$temporaria = explode( $delimitador, $pagamentos);
+				for( $indice = 1; $indice <= $this->Quantidade; $indice++)
+				{
+					$this->Pagamentos[ $indice] = intval( $temporaria[ $indice - 1]);
+				}
+			}
+		}
+
+		function setPesos( $delimitador = ",", $pesos = "")
+		{
+			$indice = 0;
+			if( $pesos === "")
+			{
+				for( $indice = 1; $indice <= $this->Quantidade; $indice++)
+				{
+					$this->Pesos[ $indice] = 1;
+				}
+			}
+			else
+			{
+				$temporaria = explode( $delimitador, $pesos);
+				for( $indice = 1; $indice <= $this->Quantidade; $indice++)
+				{
+					$this->Pesos[ $indice] = intval( $temporaria[ $indice - 1]);
+				}
+			}
+		}
+
 		function getPesoTotal()
 		{
 			$acumulador = 0;

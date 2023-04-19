@@ -14,14 +14,8 @@
 		<?php
 			require_once( 'CalculaJuros.php');
 			$calculajuros = new \jacknpoe\CalculaJuros( 4, true, 30);		// 4 parcelas, compostas, com juros de 30 dias
-			$calculajuros->Pesos[ 1] = 1;
-			$calculajuros->Pagamentos[ 1] = 30;
-			$calculajuros->Pesos[ 2] = 1;
-			$calculajuros->Pagamentos[ 2] = 60;
-			$calculajuros->Pesos[ 3] = 1;
-			$calculajuros->Pagamentos[ 3] = 90;
-			$calculajuros->Pesos[ 4] = 1;
-			$calculajuros->Pagamentos[ 4] = 120;
+			$calculajuros->setPesos();
+			$calculajuros->setPagamentos( ",", "30,60,90,120");
 			$acrescimo = $calculajuros->JurosParaAcrescimo( 5);		// juros de 5%
 			$juros = $calculajuros->AcrescimoParaJuros( 12.804733041385, 12, 100, 50, false);		// acréscimo de 12.804733041385%
 		?>
