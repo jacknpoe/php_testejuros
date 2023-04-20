@@ -35,11 +35,11 @@
 				$calculajuros->setPagamentos( ",", $pagamentos);
 				if( $calculo === "jurosparaacrescimo")
 				{
-					$resultado = $calculajuros->JurosParaAcrescimo( floatval($valor));
+					$resultado = $calculajuros->JurosParaAcrescimo( floatval( str_replace( ',', '.', $valor)));
 				}
 				else
 				{
-					$resultado = $calculajuros->AcrescimoParaJuros( floatval($valor), 14, 100, 50, false);
+					$resultado = $calculajuros->AcrescimoParaJuros( floatval( str_replace( ',', '.', $valor)), 14, 100, 50, false);
 				}
 
 			}
@@ -59,7 +59,7 @@
 			<p><input type="submit" name="calcular" value="Calcular"></p>
 		</form>
 
-		<br><p>Resultado: <?php echo $resultado; ?>%<p><br><br>
+		<br><p>Resultado: <?php echo number_format( $resultado, 14, ",", ".") ; ?>%<p><br><br>
 		<p><a href="https://github.com/jacknpoe/php_testejuros">Repositório no GitHub</a></p>
 	</body>
 </html>
