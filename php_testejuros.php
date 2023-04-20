@@ -55,7 +55,7 @@
 			<p>Pagamentos: <input type="text" name="pagamentos" value="<?php echo $pagamentos; ?>" style="width: 200px"> (prazos de pagamento separados por vírgula, para 30,60,90,120... deixar vazio)</p> 
 			<p>Cálculo: <input type="radio" name="calculo" value="jurosparaacrescimo"<?php if( $calculo === "jurosparaacrescimo") echo "checked"; ?>>juros para acréscimo
 				        <input type="radio" name="calculo" value="acrescimoparajuros"<?php if( $calculo === "acrescimoparajuros") echo "checked"; ?>>acréscimo para juros</p>
-			<p>Valor: <input type="text" name="valor" value="<?php echo $valor; ?>" style="width: 100px">%</p>
+			<p>Percentual: <input type="text" name="valor" value="<?php echo $valor; ?>" style="width: 100px">%</p>
 			<p><input type="submit" name="calcular" value="Calcular"></p>
 		</form>
 
