@@ -60,6 +60,9 @@
 		</form>
 
 		<br><p>Resultado: <?php echo number_format( $resultado, 14, ",", ".") ; ?>%<p><br><br>
-		<p><a href="https://github.com/jacknpoe/php_testejuros">Repositório no GitHub</a></p>
+		<p><a href="https://github.com/jacknpoe/php_testejuros">Repositório no GitHub</a></p><br><br>
+		<form action="index.html" method="POST" style="border: 0px">
+			<p><input type="submit" name="voltar" value="Voltar"></p>
+		</form>
 	</body>
 </html>
