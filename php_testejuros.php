@@ -59,7 +59,7 @@
 			<p><input type="submit" name="calcular" value="Calcular"></p>
 		</form>
 
-		<br>Resultado: <?php echo $resultado; ?>%<br><br>
+		<br><p>Resultado: <?php echo $resultado; ?>%<p><br><br>
 		<p><a href="https://github.com/jacknpoe/php_testejuros">Repositório no GitHub</a></p>
 	</body>
 </html>
