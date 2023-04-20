@@ -44,7 +44,7 @@
 
 			}
 		?>
-		<h1>Juros a Acréscimos<br></h1>
+		<h1>Juros para Acréscimo / Acréscimo para Juros<br></h1>
 
 		<form action="php_testejuros.php" method="POST" style="border: 0px">
 			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo $quantidade; ?>" style="width: 50px"></p>
