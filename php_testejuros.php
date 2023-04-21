@@ -59,7 +59,7 @@
 			<p><input type="submit" name="calcular" value="Calcular"></p>
 		</form>
 
-		<br><p>Resultado: <?php echo number_format( $resultado, 14, ",", ".") ; ?>%<p><br><br>
+		<br><p>Resultado: <?php echo number_format( $resultado, 14, ",", ".") ; ?>%</p><br><br>
 		<p><a href="https://github.com/jacknpoe/php_testejuros">Repositório no GitHub</a></p><br><br>
 		<form action="index.html" method="POST" style="border: 0px">
 			<p><input type="submit" name="voltar" value="Voltar"></p>
