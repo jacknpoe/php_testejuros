@@ -10,7 +10,7 @@
 		<?php
 			header( "Content-Type: text/html; charset=ISO-8859-1", true);
 
-			$resultado = '';
+			$resultado = '0';
 			$quantidade = '0';
 			$tipo = "simples";
 			$periodo = '30';
