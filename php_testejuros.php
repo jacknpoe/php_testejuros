@@ -47,7 +47,7 @@
 		<h1>Juros para Acréscimo / Acréscimo para Juros<br></h1>
 
 		<form action="php_testejuros.php" method="POST" style="border: 0px">
-			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo $quantidade; ?>" style="width: 50px"></p>
+			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo $quantidade; ?>" style="width: 50px" autofocus></p>
 			<p>Tipo: <input type="radio" name="tipo" value="simples" <?php if( $tipo === "simples") echo "checked"; ?>>simples
 				     <input type="radio" name="tipo" value="composto" <?php if( $tipo === "composto") echo "checked"; ?>>composto</p>
 			<p>Período: <input type="text" name="periodo" value="<?php echo $periodo; ?>" style="width: 50px"> dias (período sobre o qual o juros incide, normalmente 30 dias)</p>
