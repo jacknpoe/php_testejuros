@@ -39,7 +39,7 @@
 				}
 				else
 				{
-					$resultado = $calculajuros->AcrescimoParaJuros( floatval( str_replace( ',', '.', $valor)), 14, 100, 50, false);
+					$resultado = $calculajuros->AcrescimoParaJuros( floatval( str_replace( ',', '.', $valor)), 16, 100, 50, false);
 				}
 
 			}
@@ -47,15 +47,15 @@
 		<h1>Juros para Acréscimo / Acréscimo para Juros<br></h1>
 
 		<form action="php_testejuros.php" method="POST" style="border: 0px">
-			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo $quantidade; ?>" style="width: 50px" autofocus></p>
+			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo htmlspecialchars( $quantidade, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px" autofocus></p>
 			<p>Tipo: <input type="radio" name="tipo" value="simples" <?php if( $tipo === "simples") echo "checked"; ?>>simples
 				     <input type="radio" name="tipo" value="composto" <?php if( $tipo === "composto") echo "checked"; ?>>composto</p>
-			<p>Período: <input type="text" name="periodo" value="<?php echo $periodo; ?>" style="width: 50px"> dias (período sobre o qual o juros incide, normalmente 30 dias)</p>
-			<p>Pesos: <input type="text" name="pesos" value="<?php echo $pesos; ?>" style="width: 200px"> (pesos separados por vírgula, para parcelas iguais deixe vazio ou 1,1,1,1...)</p> 
-			<p>Pagamentos: <input type="text" name="pagamentos" value="<?php echo $pagamentos; ?>" style="width: 200px"> (prazos de pagamento separados por vírgula, para 30,60,90,120... deixar vazio)</p> 
+			<p>Período: <input type="text" name="periodo" value="<?php echo htmlspecialchars( $periodo, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px"> dias (período sobre o qual o juros incide, normalmente 30 dias)</p>
+			<p>Pesos: <input type="text" name="pesos" value="<?php echo htmlspecialchars( $pesos, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 200px"> (pesos separados por vírgula, para parcelas iguais deixe vazio ou 1,1,1,1...)</p> 
+			<p>Pagamentos: <input type="text" name="pagamentos" value="<?php echo htmlspecialchars( $pagamentos, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 200px"> (prazos de pagamento separados por vírgula, para 30,60,90,120... deixar vazio)</p> 
 			<p>Cálculo: <input type="radio" name="calculo" value="jurosparaacrescimo"<?php if( $calculo === "jurosparaacrescimo") echo "checked"; ?>>juros para acréscimo
 				        <input type="radio" name="calculo" value="acrescimoparajuros"<?php if( $calculo === "acrescimoparajuros") echo "checked"; ?>>acréscimo para juros</p>
-			<p>Percentual: <input type="text" name="valor" value="<?php echo $valor; ?>" style="width: 100px">%</p>
+			<p>Percentual: <input type="text" name="valor" value="<?php echo htmlspecialchars( $valor, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 100px">%</p>
 			<p><input type="submit" name="calcular" value="Calcular"></p>
 		</form>
 
