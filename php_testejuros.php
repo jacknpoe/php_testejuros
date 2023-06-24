@@ -47,10 +47,10 @@
 		<h1>Juros para Acréscimo / Acréscimo para Juros<br></h1>
 
 		<form action="php_testejuros.php" method="POST" style="border: 0px">
-			<p>Quantidade: <input type="text" name="quantidade" value="<?php echo htmlspecialchars( $quantidade, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px" autofocus></p>
+			<p>Quantidade: <input type="number" name="quantidade" value="<?php echo htmlspecialchars( $quantidade, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px" autofocus></p>
 			<p>Tipo: <input type="radio" name="tipo" value="simples" <?php if( $tipo === "simples") echo "checked"; ?>>simples
 				     <input type="radio" name="tipo" value="composto" <?php if( $tipo === "composto") echo "checked"; ?>>composto</p>
-			<p>Período: <input type="text" name="periodo" value="<?php echo htmlspecialchars( $periodo, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px"> dias (período sobre o qual o juros incide, normalmente 30 dias)</p>
+			<p>Período: <input type="number" name="periodo" value="<?php echo htmlspecialchars( $periodo, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 50px"> dias (período sobre o qual o juros incide, normalmente 30 dias)</p>
 			<p>Pesos: <input type="text" name="pesos" value="<?php echo htmlspecialchars( $pesos, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 200px"> (pesos separados por vírgula, para parcelas iguais deixe vazio ou 1,1,1,1...)</p> 
 			<p>Pagamentos: <input type="text" name="pagamentos" value="<?php echo htmlspecialchars( $pagamentos, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" style="width: 200px"> (prazos de pagamento separados por vírgula, para 30,60,90,120... deixar vazio)</p> 
 			<p>Cálculo: <input type="radio" name="calculo" value="jurosparaacrescimo"<?php if( $calculo === "jurosparaacrescimo") echo "checked"; ?>>juros para acréscimo
